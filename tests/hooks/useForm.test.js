@@ -18,7 +18,7 @@ describe('Pruebas en useForm', () => {
             email: initialForm.email,
             formState: initialForm,
             onInputChange: expect.any( Function ),
-            onResetForm: expect.any( Function ),
+            onResetForm: expect.any( Function )
         });
 
     });

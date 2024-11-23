@@ -7,8 +7,8 @@ import { LoadingQuote, Phone } from './';
 export const MultipleCustomHooks = () => {
 
     const { counter, increment } = useCounter(1);
-    const { data, isLoading, hasError } = useFetch(`https://www.breakingbadapi.com/api/quotes/${ counter }`);
-    const { author, phone } = !!data && data[0];
+    const { data, isLoading, hasError } = useFetch(`hhttps://api.breakingbadquotes.xyz/v1/quotes/${ counter }`);
+    const { author, phone, quote } = !!data && data[0];
     
     return (
         <>
@@ -18,14 +18,15 @@ export const MultipleCustomHooks = () => {
             {
                 isLoading
                  ? <LoadingQuote />
-                 : <Phone author={ author } phone={ phone } />
+                 : <Phone author={ author } phone={ phone } quote={quote}/>
             }
                       
             <button 
+                role="button"
                 className="btn btn-primary"
                 disabled={ isLoading }
                 onClick={ () => increment() }>
-                Next phone
+                Next quote
             </button>
 
         </>

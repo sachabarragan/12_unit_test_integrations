@@ -30,7 +30,7 @@ describe('Pruebas en <TodoItem />', () => {
         expect( liElement.className ).toBe('list-group-item d-flex justify-content-between')
 
         const spanElement = screen.getByLabelText('span');
-        expect( spanElement.className ).toContain('align-self-center');
+        expect( spanElement.className ).toBe('align-self-center ');
         expect( spanElement.className ).not.toContain('text-decoration-line-through');
 
     });

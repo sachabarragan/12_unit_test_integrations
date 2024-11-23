@@ -46,8 +46,8 @@ describe('Pruebas en <MultipleCustomHooks />', () => {
             isLoading: false,
             hasError: null
         });
-        
         render( <MultipleCustomHooks /> );
+        expect( screen.getByRole('code') ).toBeTruthy();
         expect( screen.getByText('Hola Mundo') ).toBeTruthy();
         expect( screen.getByText('Fernando') ).toBeTruthy();
         
